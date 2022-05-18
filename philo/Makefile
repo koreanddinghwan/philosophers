@@ -6,16 +6,16 @@
 #    By: myukang <myukang@student.42.kr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/15 22:08:17 by myukang           #+#    #+#              #
-#    Updated: 2022/05/15 22:13:58 by myukang          ###   ########.fr        #
+#    Updated: 2022/05/18 22:17:20 by myukang          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = philo
-SRCS = 
+SRCS = main.c print_err.c init_argv.c ft_atoi.c
 OBJS = $(SRCS:.c=.o)
 INC = ./
 GCC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g3 -fsanitize=thread
 
 all : $(NAME)
 

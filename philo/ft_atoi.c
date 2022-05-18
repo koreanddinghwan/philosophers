@@ -1,28 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myukang <myukang@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/15 22:12:25 by myukang           #+#    #+#             */
-/*   Updated: 2022/05/18 22:17:19 by myukang          ###   ########.fr       */
+/*   Created: 2022/05/18 16:47:10 by myukang           #+#    #+#             */
+/*   Updated: 2022/05/18 16:51:11 by myukang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo.h"
-
-int main(int ac, char **av)
+static int	ft_isspace(char c)
 {
-	t_argv			argument;
-	t_philo_data	*philo_data;
-
-	philo_data = 0;
-	if (ac_err(ac) == FAIL)
-		return (print_err(1));
-	if (init_argv(&argument, av) == FAIL)
-		return (print_err(2));
-	if (philos_init(&philo_data, argument) == FAIL)
-		return (print_err(3));
+	if ((c >= 9 && c <= 13) || c == 32)
+		return (1);
 	return (0);
+}
+
+int	ft_atoi(const char *str)
+{
+	long	result;
+	int		sign;
+
+	result = 0;
+	sign = 1;
+	while (ft_isspace(*str))
+		str++;
+	if (*str == '-' || *str == '+')
+	{
+		if (*str == '-')
+			sign *= -1;
+		str++;
+	}
+	while (*str >= '0' && *str <= '9')
+	{
+		result = result * 10 + *str - '0';
+		str++;
+	}
+	return (result * sign);
 }
