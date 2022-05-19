@@ -1,36 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_err.c                                        :+:      :+:    :+:   */
+/*   fork_act.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myukang <myukang@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/18 16:27:18 by myukang           #+#    #+#             */
-/*   Updated: 2022/05/19 22:08:08 by myukang          ###   ########.fr       */
+/*   Created: 2022/05/19 20:56:36 by myukang           #+#    #+#             */
+/*   Updated: 2022/05/19 21:03:57 by myukang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-int	ac_err(int ac)
+
+
+
+
+void	pick_fork_rl(pthread_mutex_t *fork, int nth)
 {
-	if (av < 5 || ac > 6)
-		return (FAIL);
-	else
-		return (SUCCESS);
+	pthread_mutex_lock(fork[nth], 
 }
 
-int	print_err(int errnum)
+void	pick_fork_lr(pthread_mutex_t *fork, int nth)
 {
-	if (errnum == 1)
-		write(2, "Check num of arguments\n", 23);
-	if (errnum == 2)
-		write(2, "Unavailable arguments\n", 23);
-	if (errnum == 3)
-		write(2, "philos_init_failed\n", 20);
-	if (errnum == 4)
-		write(2, "", 1);
-	if (errnum == 5)
-		write(2, "", 1);
-	return (FAIL);
+
+}
+
+void	pick_fork_up(pthread_mutex_t *fork, int nth)
+{
+	if (nth % 2 == 0)
+		pick_fork_rl(fork, nth);
+	else
+		pick_fork_lr(fork, nth);
+}
+
+
+void	put_fork_down()
+{
+
+
 }

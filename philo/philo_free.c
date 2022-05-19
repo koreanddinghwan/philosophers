@@ -1,36 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_err.c                                        :+:      :+:    :+:   */
+/*   philo_free.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myukang <myukang@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/18 16:27:18 by myukang           #+#    #+#             */
-/*   Updated: 2022/05/19 22:08:08 by myukang          ###   ########.fr       */
+/*   Created: 2022/05/19 21:53:22 by myukang           #+#    #+#             */
+/*   Updated: 2022/05/19 21:55:52 by myukang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-int	ac_err(int ac)
+void	philo_free(t_philo_data *philo_data)
 {
-	if (av < 5 || ac > 6)
-		return (FAIL);
-	else
-		return (SUCCESS);
-}
-
-int	print_err(int errnum)
-{
-	if (errnum == 1)
-		write(2, "Check num of arguments\n", 23);
-	if (errnum == 2)
-		write(2, "Unavailable arguments\n", 23);
-	if (errnum == 3)
-		write(2, "philos_init_failed\n", 20);
-	if (errnum == 4)
-		write(2, "", 1);
-	if (errnum == 5)
-		write(2, "", 1);
-	return (FAIL);
+	free(philo_data->philos_lst);
+	free(philo_data->tid_lst);
+	free(philo_data->fork);
+	free(philo_data->philos_status);
+	free(philo_data);
 }

@@ -1,36 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_err.c                                        :+:      :+:    :+:   */
+/*   reaper_thread_init.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myukang <myukang@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/18 16:27:18 by myukang           #+#    #+#             */
-/*   Updated: 2022/05/19 22:08:08 by myukang          ###   ########.fr       */
+/*   Created: 2022/05/19 22:08:36 by myukang           #+#    #+#             */
+/*   Updated: 2022/05/19 22:21:18 by myukang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-int	ac_err(int ac)
+void	*reaper_routine(void *param)
 {
-	if (av < 5 || ac > 6)
-		return (FAIL);
-	else
-		return (SUCCESS);
+	int	i;
+	int	status;
+
+	i = 0;
+	while (1)
+	{
+		
+	}
 }
 
-int	print_err(int errnum)
+t_status	reaper_thread_init(t_argv argv, t_philo_data *philo_data)
 {
-	if (errnum == 1)
-		write(2, "Check num of arguments\n", 23);
-	if (errnum == 2)
-		write(2, "Unavailable arguments\n", 23);
-	if (errnum == 3)
-		write(2, "philos_init_failed\n", 20);
-	if (errnum == 4)
-		write(2, "", 1);
-	if (errnum == 5)
-		write(2, "", 1);
-	return (FAIL);
+	t_routine_param	param;
+	pthread_t		reaper_tid;
+
+	param.argv = argv;
+	param.philo_data = philo_data;
+	param.philo = _NULL;
+	if (pthread_create(&reaper_tid, 0, reaper_routine, param) == FAIL)
+	{
+		philo_free(philo_data);
+		return (FAIL);
+	}
+	return (SUCCESS);
 }
