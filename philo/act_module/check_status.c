@@ -1,42 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fork_act.c                                         :+:      :+:    :+:   */
+/*   check_status.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myukang <myukang@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/19 20:56:36 by myukang           #+#    #+#             */
-/*   Updated: 2022/05/19 21:03:57 by myukang          ###   ########.fr       */
+/*   Created: 2022/05/21 05:06:01 by myukang           #+#    #+#             */
+/*   Updated: 2022/05/21 05:35:11 by myukang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/*
+ * curtime - lasteat check,
+ * if mininum eat, check
+ * if status should be dead, change status of philo_data thread_status and
+ * each status
+ * */
 
 #include "philo.h"
 
-
-
-
-
-void	pick_fork_rl(pthread_mutex_t *fork, int nth)
+t_status	check_status(t_philo_data *philo_data, t_philo *philo)
 {
-	pthread_mutex_lock(fork[nth], 
-}
-
-void	pick_fork_lr(pthread_mutex_t *fork, int nth)
-{
-
-}
-
-void	pick_fork_up(pthread_mutex_t *fork, int nth)
-{
-	if (nth % 2 == 0)
-		pick_fork_rl(fork, nth);
-	else
-		pick_fork_lr(fork, nth);
-}
-
-
-void	put_fork_down()
-{
-
-
+	pthread_mutex_lock(&(philo_data->m_thread_status));
+	if ()
+		return (DEAD)
+	
 }

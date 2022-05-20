@@ -1,0 +1,135 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ACT_MOD_D	Makefile	/^ACT_MOD_D = .\/act_module\/$/;"	m
+ACT_OBJS	Makefile	/^ACT_OBJS = $(addprefix $(ACT_MOD_D), $(ACT_SRCS:.c=.o))$/;"	m
+ACT_SRCS	Makefile	/^ACT_SRCS = pick_fork.c$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -Wall -Wextra -Werror -g3 -fsanitize=thread$/;"	m
+DEAD	includes/philo.h	/^# define DEAD /;"	d
+EATING	includes/philo.h	/^# define EATING /;"	d
+FAIL	includes/philo.h	/^# define FAIL /;"	d
+FORK_ON_HAND	includes/philo.h	/^# define FORK_ON_HAND /;"	d
+FORK_ON_TABLE	includes/philo.h	/^# define FORK_ON_TABLE /;"	d
+GCC	Makefile	/^GCC = gcc$/;"	m
+INC	Makefile	/^INC = .\/includes$/;"	m
+INIT_MOD_D	Makefile	/^INIT_MOD_D = .\/init_module\/$/;"	m
+INIT_OBJS	Makefile	/^INIT_OBJS = $(addprefix $(INIT_MOD_D), $(INIT_MOD_D:.c=.o))$/;"	m
+INIT_SRCS	Makefile	/^INIT_SRCS = main.c init_argv.c init_mutex.c init_philo_data.c$/;"	m
+LOG_DEAD	includes/philo.h	/^	LOG_DEAD$/;"	e	enum:e_log
+LOG_EATING	includes/philo.h	/^	LOG_EATING,$/;"	e	enum:e_log
+LOG_FORK	includes/philo.h	/^	LOG_FORK = 1,$/;"	e	enum:e_log
+LOG_SLEEPING	includes/philo.h	/^	LOG_SLEEPING,$/;"	e	enum:e_log
+LOG_THINKING	includes/philo.h	/^	LOG_THINKING,$/;"	e	enum:e_log
+NAME	Makefile	/^NAME = philo$/;"	m
+OBJS	Makefile	/^OBJS = $(ACT_OBJS) $(INIT_OBJS) $(THR_OBJS) $(TOOLS_OBJS)$/;"	m
+PHILO_H	includes/philo.h	/^# define PHILO_H$/;"	d
+SLEEPING	includes/philo.h	/^# define SLEEPING /;"	d
+SUCCESS	includes/philo.h	/^# define SUCCESS /;"	d
+THINKING	includes/philo.h	/^# define THINKING /;"	d
+THREAD_START	includes/philo.h	/^# define THREAD_START /;"	d
+THREAD_STOP	includes/philo.h	/^# define THREAD_STOP /;"	d
+THREAD_WAIT	includes/philo.h	/^# define THREAD_WAIT /;"	d
+THR_MOD_D	Makefile	/^THR_MOD_D = .\/thread_module\/$/;"	m
+THR_OBJS	Makefile	/^THR_OBJS = $(addprefix $(THR_MOD_D), $(THR_SRCS:.c=.o))$/;"	m
+THR_SRCS	Makefile	/^THR_SRCS = init_philo_thread.c init_reaper_thread.c routine_philo.c$/;"	m
+TOOLS_D	Makefile	/^TOOLS_D = .\/tools\/$/;"	m
+TOOLS_OBJS	Makefile	/^TOOLS_OBJS = $(addprefix $(TOOLS_D), $(TOOLS_SRCS:.c=.o))$/;"	m
+TOOLS_SRCS	Makefile	/^TOOLS_SRCS = cal_time.c ft_atoi.c logger.c philo_free.c print_err.c print_log.c$/;"	m
+_NULL	includes/philo.h	/^# define _NULL	/;"	d
+ac_err	tools/print_err.c	/^int	ac_err(int ac)$/;"	f
+argv	includes/philo.h	/^	t_argv			argv;$/;"	m	struct:s_routine_param
+cal_time	tools/cal_time.c	/^suseconds_t	cal_time(struct timeval created_t)$/;"	f
+check_num	init_module/init_argv.c	/^int	check_num(char *str)$/;"	f
+consumer	learn/ex6.3.c	/^void	*consumer()$/;"	f
+counter	learn/ex6.5mutex.c	/^void	*counter(void *param)$/;"	f
+counter	learn/ex6.6.c	/^void *counter(void *param)$/;"	f
+create_philo_thread	thread_module/init_philo_thread.c	/^t_status	create_philo_thread(t_argv argv, t_philo_data *philo_data, int i)$/;"	f
+create_philo_thread	thread_module/philos_thread_init.c	/^t_status	create_philo_thread(t_argv argv, t_philo_data *philo_data, int i)$/;"	f
+e_log	includes/philo.h	/^typedef enum e_log {$/;"	g
+e_log_type	includes/philo.h	/^}	e_log_type;$/;"	t	typeref:enum:e_log
+false	learn/ex6.3.c	/^# define false /;"	d	file:
+flag	learn/ex6.3.c	/^int flag[2];$/;"	v
+ft_atoi	tools/ft_atoi.c	/^int	ft_atoi(const char *str)$/;"	f
+ft_isspace	tools/ft_atoi.c	/^static int	ft_isspace(char c)$/;"	f	file:
+get_status	thread_module/init_reaper_thread.c	/^t_status	get_status(t_argv argv, t_philo_data *philo_data)$/;"	f
+init_argv	init_module/init_argv.c	/^int	init_argv(t_argv *argument, char **av)$/;"	f
+init_data	init_module/init_philo_data.c	/^t_status	init_data(t_argv argv, t_philo_data **philo_data)$/;"	f
+init_fork	init_module/init_philo_data.c	/^t_status	init_fork(t_argv argv, t_philo_data *philo_data)$/;"	f
+init_fork_mutex	init_module/init_mutex.c	/^t_status	init_fork_mutex(t_argv argv, t_philo_data *philo_data)$/;"	f
+init_mutex	init_module/init_mutex.c	/^t_status	init_mutex(t_argv argv, t_philo_data *philo_data)$/;"	f
+init_philo_data	init_module/init_philo_data.c	/^t_status	init_philo_data(t_argv argv, t_philo_data **philo_data)$/;"	f
+init_philo_thread	thread_module/init_philo_thread.c	/^t_status	init_philo_thread(t_argv argv, t_philo_data *philo_data)$/;"	f
+init_philo_thread	thread_module/philos_thread_init.c	/^t_status	init_philo_thread(t_argv argv, t_philo_data *philo_data)$/;"	f
+init_philo_tid	init_module/init_philo_data.c	/^t_status	init_philo_tid(t_argv argv, t_philo_data *philo_data)$/;"	f
+init_philos_arr	init_module/init_philo_data.c	/^t_status	init_philos_arr(t_argv argv, t_philo_data *philo_data)$/;"	f
+init_reaper_thread	thread_module/init_reaper_thread.c	/^t_status	init_reaper_thread(t_argv argv, t_philo_data *philo_data)$/;"	f
+init_struct	init_module/init_argv.c	/^void	init_struct(t_argv *argument, char **av)$/;"	f
+init_thread_status_mutex	init_module/init_mutex.c	/^t_status	init_thread_status_mutex(t_argv argv, t_philo_data *philo_data)$/;"	f
+init_writing_mutex	init_module/init_mutex.c	/^t_status	init_writing_mutex(t_argv argv, t_philo_data *philo_data)$/;"	f
+last_eat	includes/philo.h	/^	time_t			last_eat;$/;"	m	struct:s_philo
+m_fork	includes/philo.h	/^	pthread_mutex_t	*m_fork;$/;"	m	struct:s_philo_data
+m_thread_status	includes/philo.h	/^	pthread_mutex_t	m_thread_status;$/;"	m	struct:s_philo_data
+m_writing	includes/philo.h	/^	pthread_mutex_t	m_writing; \/\/philo->status 조정시 사용$/;"	m	struct:s_philo_data
+main	init_module/main.c	/^int main(int ac, char **av)$/;"	f
+main	learn/ex4.17.c	/^int main(int ac, char **av)$/;"	f
+main	learn/ex4.19.c	/^int main(int ac, char **av)$/;"	f
+main	learn/ex4.20.c	/^int main(int ac, char **av)$/;"	f
+main	learn/ex6.2.c	/^int main()$/;"	f
+main	learn/ex6.3.c	/^int main()$/;"	f
+main	learn/ex6.5mutex.c	/^int main()$/;"	f
+main	learn/ex6.6.c	/^int main()$/;"	f
+mutex	learn/ex6.5mutex.c	/^pthread_mutex_t mutex[5];$/;"	v
+mutex_destroy_all	tools/philo_free.c	/^void	mutex_destroy_all(t_argv argv, t_philo_data *philo_data)$/;"	f
+mutex_n_destroy	tools/philo_free.c	/^void	mutex_n_destroy(pthread_mutex_t	*mutex_arr, int n)$/;"	f
+nth	includes/philo.h	/^	int				nth;$/;"	m	struct:s_philo
+num_of_philo	includes/philo.h	/^	int	num_of_philo;$/;"	m	struct:s_argv
+philo	includes/philo.h	/^	t_philo			*philo;$/;"	m	struct:s_routine_param
+philo_activity	thread_module/routine_philo.c	/^void	philo_activity(t_routine_param *param)$/;"	f
+philo_data	includes/philo.h	/^	t_philo_data	*philo_data;$/;"	m	struct:s_routine_param
+philo_free	tools/philo_free.c	/^void	philo_free(t_argv argv, t_philo_data *philo_data)$/;"	f
+philos_arr	includes/philo.h	/^	t_philo			*philos_arr;$/;"	m	struct:s_philo_data
+pick_fork	act_module/pick_fork.c	/^void	pick_fork(t_argv argv, t_philo_data *philo_data, t_philo *philo)$/;"	f
+pick_fork_l	act_module/pick_fork.c	/^void	pick_fork_l(t_philo_data *philo_data, t_philo *philo)$/;"	f
+pick_fork_r	act_module/pick_fork.c	/^void	pick_fork_r(t_argv argv, t_philo_data *philo_data, t_philo *philo)$/;"	f
+print_err	tools/print_err.c	/^int	print_err(int errnum)$/;"	f
+print_log	tools/print_log.c	/^void	print_log(t_philo_data *philo_data, t_philo *philo, t_status log_type)$/;"	f
+print_time	tools/logger.c	/^void	print_time(t_philo_data *philo_data, struct timeval	created_t, struct timeval	cur_t)$/;"	f
+producer	learn/ex6.3.c	/^void	*producer()$/;"	f
+reaper_routine	thread_module/init_reaper_thread.c	/^void	*reaper_routine(void *param)$/;"	f
+routine_philo	thread_module/routine_philo.c	/^void	*routine_philo(void *param)$/;"	f
+run1	learn/ex6.2.c	/^void	*run1()$/;"	f
+run2	learn/ex6.2.c	/^void	*run2()$/;"	f
+runner	learn/ex4.17.c	/^void *runner(void *param)$/;"	f
+runner	learn/ex4.19.c	/^void *runner(void *param)$/;"	f
+s_argv	includes/philo.h	/^typedef struct	s_argv$/;"	s
+s_philo	includes/philo.h	/^typedef struct	s_philo$/;"	s
+s_philo_data	includes/philo.h	/^typedef struct	s_philo_data$/;"	s
+s_routine_param	includes/philo.h	/^typedef struct	s_routine_param$/;"	s
+sem	learn/ex6.6.c	/^sem_t sem;$/;"	v
+status	includes/philo.h	/^	t_status		status;$/;"	m	struct:s_philo
+sum	learn/ex6.2.c	/^int sum;$/;"	v
+sum	learn/ex6.3.c	/^int sum;$/;"	v
+sum	learn/ex6.5mutex.c	/^int sum = 0;$/;"	v
+sum	learn/ex6.6.c	/^int sum = 0;$/;"	v
+t_argv	includes/philo.h	/^}	t_argv;$/;"	t	typeref:struct:s_argv
+t_philo	includes/philo.h	/^}	t_philo;$/;"	t	typeref:struct:s_philo
+t_philo_data	includes/philo.h	/^}	t_philo_data;$/;"	t	typeref:struct:s_philo_data
+t_routine_param	includes/philo.h	/^}	t_routine_param;$/;"	t	typeref:struct:s_routine_param
+t_size	includes/philo.h	/^typedef unsigned long t_size;$/;"	t
+t_status	includes/philo.h	/^typedef int			t_status;$/;"	t
+threads_status	includes/philo.h	/^	t_status		threads_status;$/;"	m	struct:s_philo_data
+tid_arr	includes/philo.h	/^	pthread_t		*tid_arr;$/;"	m	struct:s_philo_data
+time_created	includes/philo.h	/^	struct timeval	time_created;$/;"	m	struct:s_philo	typeref:struct:s_philo::timeval
+time_created	includes/philo.h	/^	struct timeval	time_created;$/;"	m	struct:s_philo_data	typeref:struct:s_philo_data::timeval
+time_to_die	includes/philo.h	/^	int	time_to_die;$/;"	m	struct:s_argv
+time_to_eat	includes/philo.h	/^	int	time_to_eat;$/;"	m	struct:s_argv
+time_to_sleep	includes/philo.h	/^	int	time_to_sleep;$/;"	m	struct:s_argv
+times_must_eat	includes/philo.h	/^	int	times_must_eat;$/;"	m	struct:s_argv
+total_eat	includes/philo.h	/^	int				total_eat;$/;"	m	struct:s_philo
+true	learn/ex6.3.c	/^# define true /;"	d	file:
+turn	learn/ex6.3.c	/^int turn;$/;"	v
+validate_av_num	init_module/init_argv.c	/^int	validate_av_num(char **av)$/;"	f
+value	learn/ex4.19.c	/^int value = 0;$/;"	v
